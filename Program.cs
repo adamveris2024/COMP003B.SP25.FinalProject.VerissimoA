@@ -1,3 +1,6 @@
+using COMP003B.SP25.FinalProject.VerissimoA.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.SP25.FinalProject.VerissimoA
 {
     public class Program
@@ -8,6 +11,9 @@ namespace COMP003B.SP25.FinalProject.VerissimoA
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<PetAdoptionContext>(options =>
+            options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
 
             var app = builder.Build();
 
