@@ -1,0 +1,54 @@
+﻿@model IEnumerable<COMP003B.SP25.FinalProject.VerissimoA.Models.Shelter>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShelterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShelterAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShelterPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShelterEmail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShelterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShelterAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShelterPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShelterEmail)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ShelterId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ShelterId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ShelterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

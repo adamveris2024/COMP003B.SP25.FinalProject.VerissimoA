@@ -1,0 +1,54 @@
+﻿@model IEnumerable<COMP003B.SP25.FinalProject.VerissimoA.Models.Animal>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AnimalId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AnimalId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AnimalId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
