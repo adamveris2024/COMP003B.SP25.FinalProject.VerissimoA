@@ -1,17 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace COMP003B.SP25.FinalProject.VerissimoA.Models
-{
+{     
     public class Staff
     {
-        public int MemberId { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        public string MemberName { get; set; }
+        [Required]
+        public string Name { get; set; }
 
-        public string MemberRole { get; set; }
+        [Required]
+        public string Role { get; set; }
 
-        [EmailAddress]
-        public string MemberEmail { get; set; }
+        [Required]
+        public string Email { get; set; }
 
         public int ShelterId { get; set; }
         public Shelter Shelter { get; set; }

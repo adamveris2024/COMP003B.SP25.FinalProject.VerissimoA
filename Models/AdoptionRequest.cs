@@ -4,7 +4,7 @@ namespace COMP003B.SP25.FinalProject.VerissimoA.Models
 {
     public class AdoptionRequest
     {
-        public int AdoptionId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public int AnimalId { get; set; }
@@ -12,10 +12,10 @@ namespace COMP003B.SP25.FinalProject.VerissimoA.Models
         [Required]
         public int AdopterId { get; set; }
 
-        public DateTime DateRequested { get; set; }
-
         [Required]
         public string Status { get; set; }
+
+        public string DateRequested { get; set; }
 
         public Animal Animal { get; set; }
         public Adopter Adopter { get; set; }
