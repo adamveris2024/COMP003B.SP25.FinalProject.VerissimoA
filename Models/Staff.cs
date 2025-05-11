@@ -14,6 +14,7 @@ namespace COMP003B.SP25.FinalProject.VerissimoA.Models
         public string Role { get; set; }
 
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         public int ShelterId { get; set; }
