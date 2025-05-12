@@ -7,6 +7,17 @@
 
 <h1>Create</h1>
 
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">Form is invalid. Check Fields. </div>
+}
+
+@foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+{
+    <div class="text-danger">@modelError.ErrorMessage</div>
+}
+
+
 <h4>AdoptionRequest</h4>
 <hr />
 <div class="row">

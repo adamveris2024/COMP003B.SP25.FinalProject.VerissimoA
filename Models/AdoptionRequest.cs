@@ -17,7 +17,7 @@ namespace COMP003B.SP25.FinalProject.VerissimoA.Models
 
         public string DateRequested { get; set; }
 
-        public Animal Animal { get; set; }
-        public Adopter Adopter { get; set; }
+        public Animal? Animal { get; set; }
+        public Adopter? Adopter { get; set; }
     }
 }

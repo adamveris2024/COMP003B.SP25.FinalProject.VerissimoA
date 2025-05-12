@@ -16,7 +16,8 @@ namespace COMP003B.SP25.FinalProject.VerissimoA.Models
 
         [Phone]
         public string AdopterPhone { get; set; }
-
-        public ICollection<AdoptionRequest> AdoptionRequests { get; set; }
+        
+        //breaks the code
+        //public ICollection<AdoptionRequest> AdoptionRequests { get; set; }
     }
 }
