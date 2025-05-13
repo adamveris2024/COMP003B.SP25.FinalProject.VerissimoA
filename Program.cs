@@ -29,7 +29,7 @@ namespace COMP003B.SP25.FinalProject.VerissimoA
 
             app.UseStaticFiles();
 
-            app.UseRequestTiming();
+            app.UseMiddleware<COMP003B.SP25.FinalProject.VerissimoA.Middleware.RequestTimingMiddleware>();
 
             app.UseRouting();
 
