@@ -27,10 +27,6 @@ namespace COMP003B.SP25.FinalProject.VerissimoA
 
             app.UseHttpsRedirection();
 
-            app.UseStaticFiles();
-
-            app.UseMiddleware<COMP003B.SP25.FinalProject.VerissimoA.Middleware.RequestTimingMiddleware>();
-
             app.UseRouting();
 
             app.UseAuthorization();
