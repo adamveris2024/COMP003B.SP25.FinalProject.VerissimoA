@@ -26,11 +26,17 @@ namespace COMP003B.SP25.FinalProject.VerissimoA
             }
 
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
+
+            app.UseRequestTiming();
+
             app.UseRouting();
 
             app.UseAuthorization();
 
             app.MapStaticAssets();
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
